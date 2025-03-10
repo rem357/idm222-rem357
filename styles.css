@@ -22,6 +22,15 @@ main {
   padding-bottom: 20px; /* Space before footer */
 }
 
+body {
+  background-image: url('https://github.com/rem357/idm222-rem357/blob/main/_%20(2).png?raw=true');
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  background-attachment: fixed; /* Keeps the background in place while scrolling */
+}
+
+
 /* Ensure the footer stays at the bottom */
 footer {
   width: 100vw;
