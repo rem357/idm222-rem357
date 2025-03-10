@@ -6,14 +6,108 @@
   box-sizing: border-box;
 }
 
+/* Ensure the entire page takes up full height */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
   display: flex;
   flex-direction: column;
 }
+
+/* Make sure the main content takes up the available space */
+main {
+  flex-grow: 1; /* Pushes the footer down */
+  margin-top: 100px; /* Prevents overlap with fixed header */
+  padding-bottom: 20px; /* Space before footer */
+}
+
+/* Ensure the footer stays at the bottom */
+footer {
+  width: 100vw;
+  background-color: #E43D12;
+  color: #EBE9E1;
+  text-align: center;
+  padding: 0;
+  margin-top: auto; /* Forces footer to stick at the bottom */
+}
+
+header {
+  background-color: #E43D12; 
+  color: #EBE9E1; 
+  display: flex;
+  align-items: center; /* Keeps text centered vertically */
+  flex-direction: column;
+  justify-content: center; /* Centers text horizontally */
+  text-align: center;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.image-container img {
+  max-width: 80%;
+  margin: auto;
+}
+p {
+  align-items: center; /* Keeps text centered vertically */
+  flex-direction: column;
+  justify-content: center; /* Centers text horizontally */
+  text-align: center;
+}
+
+/* General Section Styling */
+.project-section {
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Grid Layout for Individual Sections */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 column on mobile */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  align-items: start; /* Ensures items align at the top */
+}
+
+/* Individual Project Styling */
+.project {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Make Images Consistent */
+.project img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* typography/fonts */
@@ -79,272 +173,234 @@ h4 {
   margin: 0.4em 0;
 }
 
-main p, main li {
-  font-size: 10pt;
-  margin: 1em 0;
-}
-
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* links */
-a {
-  color: #EBE9E1;
-  text-decoration: none;
-}
+  /* footer */
 
-a:hover {
-  text-decoration: underline;
-}
+  footer .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 
-main .contact-info a {
-  color: #E43D12; 
-  font-weight: bold; 
-  text-decoration: underline; 
-}
+  footer .contact-info li {
+    margin: 5px 0;
+  }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* sections layout */
-header, nav, main, footer {
-  padding: 1rem;
-  width: 100%;
-}
+  footer .contact-info a {
+    color: #EBE9E1;
+    text-decoration: none;
+  }
 
-header {
-  background-color: #E43D12; 
-  color: #EBE9E1; 
-  display: flex;
-  align-items: center; /* Keeps text centered vertically */
-  justify-content: center; /* Centers text horizontally */
-  text-align: center;
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1002;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 0;
-}
+  footer .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
 
-header h1 {
-  margin: 0; 
-  width: auto; /* Prevents stretching */
-  flex-grow: 1; /* Ensures it stays centered */
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  /* DEBUG */
 
-main {
-  margin-top: 100px;
-  flex: 1;
-  padding-bottom: 120px; /* Prevents overlap with footer */
-  margin-top: 120px; /* Try 120px or more */
-  padding: 20px;
-}
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* container */
-.container {
-  width: 100%;
-  min-width: 320px;
-  margin: 0 auto;
-  overflow: auto;
-  flex: 1;
+
+@media (min-width: 320px) {
+  main p, main li {
+    font-size: 10pt;
+    margin: 1em 0;
+  }
+
+  
+  /* links */
+  a {
+    color: #EBE9E1;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  main .contact-info a {
+    color: #E43D12; 
+    font-weight: bold; 
+    text-decoration: underline; 
+  }
+
+  /* sections layout */
+  header, nav, main, footer {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  header h1 {
+    margin: 0; 
+    width: auto; /* Prevents stretching */
+    flex-grow: 1; /* Ensures it stays centered */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  /* container */
+  .container {
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    overflow: auto;
+    flex: 1;
+  }
+
+  .container h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .container p {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+ 
+  /* lists */
+  ul, ol {
+    padding-left: 1.5em;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+ 
+  /* images */
+  img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+  }
+
+ 
+  /* download buttom */
+  .download-button {
+    display: inline-block;
+    background-color: #E43D12;
+    color: #EBE9E1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .download-button:hover {
+    background-color: #E43D12;
+  }
+
+  .download-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+ 
+  /* nav menu */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-toggle-label span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #EBE9E1;
+    margin: 5px 0;
+  }
+
+  .nav-toggle:checked ~ nav {
+    left: 0;
+    opacity: 1;
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav {
+    background: #E43D12;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: left 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+
+  nav ul li a {
+    color: #EBE9E1;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  nav ul li a:hover {
+    color: #FFF;
 }
 
-.container h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 0;
-}
 
-.container p {
-  padding: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* lists */
-ul, ol {
-  padding-left: 1.5em;
-}
-
-ul li {
-  list-style-type: none;
-}
-
-ol li {
-  list-style-type: decimal;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* images */
-img {
-  max-width: 90%;
-  height: auto;
-  display: block;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* download buttom */
-.download-button {
-  display: inline-block;
-  background-color: #E43D12;
-  color: #EBE9E1;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1rem;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.download-button:hover {
-  background-color: #E43D12;
-}
-
-.download-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* nav menu */
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.nav-toggle-label span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: #EBE9E1;
-  margin: 5px 0;
-}
-
-.nav-toggle:checked ~ nav {
-  left: 0;
-  opacity: 1;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-nav {
-  background: #E43D12;
-  position: fixed;
-  top: 0;
-  left: -100vw;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: left 0.3s ease, opacity 0.3s ease;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 1rem 0;
-}
-
-nav ul li a {
-  color: #EBE9E1;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-  color: #FFF;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* footer */
-
-footer {
-  position: relative; /* Change from fixed to relative */
-  bottom: 0;
-  width: 100%;
-  background-color: #E43D12;
-  color: #EBE9E1;
-  text-align: center;
-  font-size: 0.8em;
-  padding: 20px 0;
 }
 
 
-footer .contact-info ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer .contact-info li {
-  margin: 5px 0;
-}
-
-footer .contact-info a {
-  color: #EBE9E1;
-  text-decoration: none;
-}
-
-footer .contact-info a:hover {
-  text-decoration: underline;
-}
 
 
 
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
-/* Media Queries for Responsiveness */
-
 /* Tablet (min-width: 768px) */
+
 @media (min-width: 768px) {
   .container {
     max-width: 700px;
     padding: 20px;
-  }
-
-  header {
-    height: 80px; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
   }
 
   main {
@@ -383,17 +439,70 @@ footer .contact-info a:hover {
     padding: 0;
     text-align: center;
   }
+
+  .past-projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto; /* Ensures no large gaps */
+    gap: 40px;
+    align-items: start;
+  }
+  
+  .project-section {
+    width: 100%;
+  }
+
+  /* Photography (Left Column, Full Height) */
+  .project-section:nth-child(1) { 
+    grid-column: 1; 
+    grid-row: 1 / span 2; /* Spans both rows */
+  }
+
+  /* Visual Studies (Right Column, Row 1) */
+  .project-section:nth-child(2) { 
+    grid-column: 2; 
+    grid-row: 1; 
+  }
+
+  /* Makers Workshop (Directly Below Visual Studies) */
+  .project-section:nth-child(3) { 
+    grid-column: 2; 
+    grid-row: 2; /* No gap, starts immediately after Visual Studies */
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2-column grid inside each section */
+  }
+  
+  .responsive-image {
+    width: 100%;
+    max-width: 500px; /* Prevent overly large images */
+    height: auto;
+    object-fit: cover; /* Ensures images don't stretch */
+    margin: 0 auto; /* Center images */
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns: Image + Text */
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .image-container {
+    justify-self: center; /* Centers the image in its grid cell */
+  }
+
+  .about-text {
+    max-width: 600px;
+    font-size: 100px;
+  }
 }
 
 
 
-
-
-
-
-
-
-
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* Desktop (min-width: 1024px) */
 @media (min-width: 1024px) {
   .container {
@@ -408,13 +517,9 @@ footer .contact-info a:hover {
   }
 
   main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
-  }
-
-  .image-container img {
-    max-width: 80%;
-    margin: auto;
+    margin-top: 140px;
   }
 
   nav {
@@ -438,21 +543,74 @@ footer .contact-info a:hover {
     display: block; /* Keep hamburger menu visible */
   }
 
+  
+  .past-projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .project-section {
+    width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns inside each section */
+  }
+  .project {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project img {
+    width: 100%;
+    max-width: 1000px; /* Increase max width for larger display */
+    height: auto;
+    object-fit: cover; /* Prevent stretching */
+    border-radius: 10px; /* Maintain rounded edges */
+  }
+  
+  img {
+    padding: 20px;
+  }
+
+  .responsive-image {
+    width: 100%;
+    max-width: 550px; /* Prevent overly large images */
+    height: auto;
+    object-fit: cover; /* Ensures images don't stretch */
+    margin: 0 auto; /* Center images */
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr 1fr; /* Keep 2 columns */
+    gap: 60px;
+  }
+
+  /* Ensure text is large and readable */
+  .about-text {
+    font-size: 20px; /* Increase text size */
+    line-height: 2; /* Improve readability */
+    max-width: 800px; /* Allow slightly wider text */
+    background-color: #E43D12;
+    padding: 20px;
+  }
+
+  /* Force all paragraph text inside .about-text to be larger */
+  .about-text p {
+    font-size: 2opx !important; /* Ensure it applies */
+    line-height: 2;
+    color: #EBE9E1 !important;
+  }
+
+  /* Make headings larger */
+  h2 {
+    font-size: 36px !important; /* Ensure subheadings are bigger */
+  }
+
+  p {
+    font-size: 20px !important; /* Override other conflicting styles */
+  }
 }
 
-
-
-
-
-.container {
-  outline: 2px solid purple;
-}
-
-header {
-  background-color: limegreen !important; /* See if header expands */
-}
-
-header h1 {
-  background-color: blue !important; /* Check if h1 takes full width */
-  outline: 2px solid red; /* Visualize the space it occupies */
-}
