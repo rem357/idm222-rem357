@@ -139,6 +139,8 @@ main {
   margin-top: 100px;
   flex: 1;
   padding-bottom: 120px; /* Prevents overlap with footer */
+  margin-top: 120px; /* Try 120px or more */
+  padding: 20px;
 }
 
 
@@ -290,20 +292,15 @@ nav ul li a:hover {
 /* footer */
 
 footer {
+  position: relative; /* Change from fixed to relative */
+  bottom: 0;
+  width: 100%;
   background-color: #E43D12;
   color: #EBE9E1;
   text-align: center;
   font-size: 0.8em;
-  height: 120px; /* Keep footer height consistent */
-  width: 100%; /* Ensures full width */
-  position: fixed; /* Stays at the bottom of content */
-  left: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 20px 0;
 }
-
 
 
 footer .contact-info ul {
@@ -372,14 +369,13 @@ footer .contact-info a:hover {
   }
 
   .nav-toggle:checked ~ nav {
-    left: 0; /* Show nav when hamburger is clicked */
+    left: 0;
   }
 
   .nav-toggle-label {
-    display: block; /* Keep hamburger menu visible */
+    display: block;
   }
 
-  
   nav ul {
     flex-direction: column;
     gap: 15px;
@@ -387,15 +383,7 @@ footer .contact-info a:hover {
     padding: 0;
     text-align: center;
   }
-
-  .nav-toggle-label {
-    display: inline; 
-  }
 }
-
-
-
-
 
 
 
@@ -451,10 +439,6 @@ footer .contact-info a:hover {
   }
 
 }
-
-
-
-
 
 
 
