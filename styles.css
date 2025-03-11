@@ -23,7 +23,7 @@ main {
 }
 
 body {
-  background-image: url('https://github.com/rem357/idm222-rem357/blob/main/_%20(2).png?raw=true');
+  background-image: url('https://github.com/rem357/idm222-rem357/blob/main/NEW%20BACKGROUNF.png?raw=true');
   background-size: cover; /* Ensures the image covers the entire background */
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat; /* Prevents repeating the image */
@@ -61,6 +61,7 @@ header {
 .image-container img {
   max-width: 80%;
   margin: auto;
+  padding-top: 20px;
 }
 p {
   align-items: center; /* Keeps text centered vertically */
@@ -205,19 +206,262 @@ h4 {
   }
   
 
-  /* DEBUG */
-
-
-
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media (min-width: 320px) {
-  main p, main li {
-    font-size: 10pt;
-    margin: 1em 0;
+
+  /* INDEX */
+  .index-image {
+    max-width: 400px !important;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .index-text {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  /* ABOUT ME */
+
+  .about-me h2 {
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+    font-size: 35px;
+    color: #E43D12;
+  }
+
+  .about-image-me {
+    max-width: 300px !important;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .about-image-pets {
+    max-width: 300px !important;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .about-text {
+    max-width: 500px;
+    margin: auto;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
   }
 
   
+  /* PAST PROJECTS */
+  .image-container-projects img {
+    max-width: 400px;
+    margin: auto;
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .project-section p {
+    max-width: 450px;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .project-section h2 {
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+    font-size: 35px;
+    color: #E43D12;
+  }
+  /* CONTACT ME */
+  .contact-info-page {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .contact-info a,
+  .contact-info-page a {
+    color: #E43D12; /* Red color */
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  /* RESUME */
+  .resume h2 {
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    font-size: 35px;
+    color: #E43D12;
+
+  }
+
+  .resume h3 {
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    font-size: 25px;
+    color: #E43D12;
+  } 
+
+  .resume h4 {
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    color: #E43D12;
+  }
+
+  .resume p {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    align-items: left;
+    font-size: 15px;
+  }
+
+  .resume ol {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    align-items: left;
+    font-size: 15px;
+  }
+
+  .resume ul {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    align-items: left;
+    font-size: 15px;
+  }
+
+  .resume li {
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    line-height: 1.5;
+    align-items: left;
+    font-size: 15px;
+  }
+  
+  .resume .download-button {
+    display: inline-block;
+    background-color: #E43D12;
+    color: #EBE9E1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  .resume .download-button:hover {
+    background-color: #E43D12;
+  }
+  .resume .download-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  /* CS1 */
+  .cs1 h2 {
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: #E43D12;
+  }
+
+  .cs1 p {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    align-items: left;
+    font-size: 15px;
+  }
+
+  .cs1 ol {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    align-items: left;
+    font-size: 15px;
+  }
+
+  .image-container {
+  max-width: 400px;
+  align-items: center;
+  }
+
+  /* CS2 */
+  .cs2 h2 {
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: #E43D12;
+  }
+
+  .cs2 p {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    align-items: left;
+    font-size: 15px;
+  }
+
+  .cs2 .image-container {
+    max-width: 400px;
+    align-items: center;
+  }
+
+
+  /* CS3 */
+  .cs3 h2 {
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: #E43D12;
+  }   
+
+  .cs3 p {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    align-items: left;
+    font-size: 15px;
+  }
+
+
   /* links */
   a {
     color: #EBE9E1;
@@ -268,31 +512,9 @@ h4 {
 
   .container p {
     padding: 1rem;
-    font-size: 1rem;
     line-height: 1.6;
   }
 
- 
-  /* lists */
-  ul, ol {
-    padding-left: 1.5em;
-  }
-
-  ul li {
-    list-style-type: none;
-  }
-
-  ol li {
-    list-style-type: decimal;
-  }
-
- 
-  /* images */
-  img {
-    max-width: 90%;
-    height: auto;
-    display: block;
-  }
 
  
   /* download buttom */
@@ -306,11 +528,9 @@ h4 {
     text-align: center;
     transition: background-color 0.3s ease;
   }
-
   .download-button:hover {
     background-color: #E43D12;
   }
-
   .download-section {
     display: flex;
     justify-content: center;
@@ -319,7 +539,6 @@ h4 {
     flex-direction: column;
   }
 
- 
   /* nav menu */
   .nav-toggle {
     display: none;
@@ -394,11 +613,23 @@ h4 {
     color: #FFF;
 }
 
+/* lists */
+  ul, ol {
+  padding-left: 1.5em;
+}
 
+  ul li {
+  list-style-type: none;
+}
+
+  ol li {
+  list-style-type: decimal;
 }
 
 
 
+
+}
 
 
 
@@ -485,7 +716,7 @@ h4 {
   
   .responsive-image {
     width: 100%;
-    max-width: 500px; /* Prevent overly large images */
+    max-width: 100px; /* Prevent overly large images */
     height: auto;
     object-fit: cover; /* Ensures images don't stretch */
     margin: 0 auto; /* Center images */
@@ -501,11 +732,15 @@ h4 {
 
   .image-container {
     justify-self: center; /* Centers the image in its grid cell */
+    max-width: 300px;
   }
 
   .about-text {
-    max-width: 600px;
-    font-size: 100px;
+    font-size: 20px !important; /* Increase text size */
+    line-height: 2; /* Improve readability */
+    max-width: 800px; /* Allow slightly wider text */
+    background-color: #EBE9E1;
+    padding: 1S0px;
   }
 }
 
@@ -582,6 +817,7 @@ h4 {
   
   img {
     padding: 20px;
+    max-width: 500px !important;
   }
 
   .responsive-image {
@@ -602,15 +838,15 @@ h4 {
     font-size: 20px; /* Increase text size */
     line-height: 2; /* Improve readability */
     max-width: 800px; /* Allow slightly wider text */
-    background-color: #E43D12;
-    padding: 20px;
+    background-color: #EBE9E1;
+    padding: 1S0px;
   }
 
   /* Force all paragraph text inside .about-text to be larger */
   .about-text p {
     font-size: 2opx !important; /* Ensure it applies */
     line-height: 2;
-    color: #EBE9E1 !important;
+    color: #E43D12 !important;
   }
 
   /* Make headings larger */
