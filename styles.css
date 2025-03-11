@@ -211,15 +211,23 @@ h4 {
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media (min-width: 320px) {
+  
 
   /* INDEX */
-  .index-image {
-    max-width: 400px !important;
-    margin: auto;
-    width: 100%;
+  .image-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    width: 100%;
+    text-align: center;
   }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
 
   .index-text {
     max-width: 500px;
@@ -236,7 +244,7 @@ h4 {
     max-width: 450px;
     margin: auto;
     padding: 10px;
-    align-items: center;
+    text-align: center;
     font-size: 35px;
     color: #E43D12;
   }
@@ -344,7 +352,7 @@ h4 {
     max-width: 500px;
     margin: auto;
     padding: 20px;
-    align-items: left;
+    text-align: left;
     font-size: 15px;
   }
 
@@ -352,7 +360,7 @@ h4 {
     max-width: 400px;
     margin: auto;
     padding: 20px;
-    align-items: left;
+    text-align: left;
     font-size: 15px;
   }
 
@@ -360,7 +368,7 @@ h4 {
     max-width: 400px;
     margin: auto;
     padding: 20px;
-    align-items: left;
+    text-align: left;
     font-size: 15px;
   }
 
@@ -369,7 +377,7 @@ h4 {
     margin: auto;
     padding: 10px;
     line-height: 1.5;
-    align-items: left;
+    text-align: left;
     font-size: 15px;
   }
   
@@ -408,7 +416,7 @@ h4 {
     max-width: 500px;
     margin: auto;
     padding: 20px;
-    align-items: left;
+    text-align: left;
     font-size: 15px;
   }
 
@@ -416,14 +424,13 @@ h4 {
     max-width: 400px;
     margin: auto;
     padding: 20px;
-    align-items: left;
+    text-align: left;
     font-size: 15px;
   }
 
   .cs1 .image-container {
   max-width: 400px;
   align-items: center;
-  text-align: center;
   width: 100%;
   }
 
@@ -441,7 +448,7 @@ h4 {
     max-width: 500px;
     margin: auto;
     padding: 20px;
-    align-items: left;
+    text-align: left;
     font-size: 15px;
   }
 
@@ -467,7 +474,7 @@ h4 {
     max-width: 500px;
     margin: auto;
     padding: 20px;
-    align-items: left;
+    text-align: left;
     font-size: 15px;
   }
 
