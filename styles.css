@@ -11,8 +11,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 /* Make sure the main content takes up the available space */
@@ -58,11 +57,14 @@ header {
   padding: 0;
 }
 
-.image-container img {
+.image-container {
   max-width: 80%;
+  display: block;
   margin: auto;
   padding-top: 20px;
+  align-items: center;
 }
+
 p {
   align-items: center; /* Keeps text centered vertically */
   flex-direction: column;
@@ -214,6 +216,8 @@ h4 {
   .index-image {
     max-width: 400px !important;
     margin: auto;
+    width: 100%;
+    align-items: center;
     padding-top: 20px;
   }
 
@@ -222,6 +226,7 @@ h4 {
     margin: auto;
     padding: 20px;
     align-items: center;
+    width: 100%;
     font-size: 15px;
   }
 
@@ -268,7 +273,9 @@ h4 {
   /* PAST PROJECTS */
   .image-container-projects img {
     max-width: 400px;
+    display: block;
     margin: auto;
+    max-width: 100%;
     padding-top: 20px;
     align-items: center;
   }
@@ -313,7 +320,6 @@ h4 {
     text-align: left;
     font-size: 35px;
     color: #E43D12;
-
   }
 
   .resume h3 {
@@ -414,9 +420,11 @@ h4 {
     font-size: 15px;
   }
 
-  .image-container {
+  .cs1 .image-container {
   max-width: 400px;
   align-items: center;
+  text-align: center;
+  width: 100%;
   }
 
   /* CS2 */
@@ -440,6 +448,8 @@ h4 {
   .cs2 .image-container {
     max-width: 400px;
     align-items: center;
+    text-align: center;
+    width: 100%;
   }
 
 
