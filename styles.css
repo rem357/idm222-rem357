@@ -30,7 +30,7 @@ main {
     }
   
   body {
-    background-image: url('https://github.com/rem357/idm222-rem357/blob/main/NEW%20BACKGROUNF.png?raw=true');
+    background-image: url('https://github.com/rem357/idm222-rem357/blob/main/compressed-images/background%20image/NEW%20BACKGROUNF-min.png?raw=true');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -200,16 +200,16 @@ main {
   }
 
   .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
+    transform: rotate(45deg) translate(6px, 6px);
+}
 
-  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
     opacity: 0;
-  }
+}
 
-  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
 
   nav {
     background: #E43D12;
@@ -246,6 +246,48 @@ main {
   nav ul li a:hover {
     color: #FFF;
 }
+
+/* Shadow overlay for nav */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 999; /* Behind nav but above content */
+}
+
+/* When nav opens, show the shadow */
+.nav-toggle:checked ~ .nav-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Ensure nav appears above the shadow */
+nav {
+    position: fixed;
+    top: 0;
+    left: -100vw; /* Initially hidden */
+    width: 500px;
+    height: 100vh;
+    background: #E43D12;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000; /* Above the overlay */
+}
+
+/* Show nav when checked */
+.nav-toggle:checked ~ nav {
+    left: 0;
+}
+
 
 /* lists */
   ul, ol {
@@ -375,11 +417,11 @@ main {
     }
   
     header {
-        flex-direction: row; /* 🔹 Puts text & nav side-by-side instead of stacking */
+        flex-direction: row; 
         justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
-        height: auto; /* 🔹 Allows it to expand naturally */
+        height: auto; 
     }
   
     main {
@@ -390,26 +432,34 @@ main {
     nav {
         position: fixed;
         top: 0;
-        left: -100vw;
-        width: 100vw;
+        left: 0; 
+        width: 500px; 
         height: 100vh;
         background: #E43D12;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: left 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
     }
-  
+
     .nav-toggle:checked ~ nav {
-        left: 0; 
+        transform: translateX(0);
     }
-  
+
     .nav-toggle-label {
-        display: block; 
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        text-align: center;
     }
   
     header h1 {
-        margin: 0; /* 🔹 Removes extra space pushing text down */
+        margin: 0; 
         font-size: 38px;
         display: flex;
         align-items: center;
@@ -424,6 +474,7 @@ main {
     p {
          font-size: 20px !important;
     }
+    
 }
 
 
@@ -542,15 +593,15 @@ main {
 
 @media (min-width: 320px) {
     .about-me {
-        width: 100%; /* Ensures it spans full width */
-        max-width: 450px; /* Prevents unnecessary shrinking */
-        margin: 0 auto; /* Ensures full centering */
-        padding: 5px 0; /* Reduce excessive padding */
-        text-align: center; /* Keeps text centered */
+        width: 100%; 
+        max-width: 450px; 
+        margin: 0 auto; 
+        padding: 5px 0;
+        text-align: center; 
         font-size: 35px;
         color: #E43D12;
         display: flex;
-        justify-content: center; /* Centers text inside */
+        justify-content: center; 
         align-items: center;
     }
 
@@ -691,6 +742,9 @@ main {
     text-align: center;
     font-size: clamp(14px, 2vw, 18px);
     line-height: clamp(1.4, 2vw, 2);
+    background-color: #EBE9E1; 
+    border-radius: 10px; 
+    padding: 20px;
 }
 
 .cs1-text.full-width {
@@ -810,30 +864,33 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    width: 100%; /* Ensures it spans full width */
-    max-width: 1000px; /* Keeps it contained */
-    margin-top: 90px; /* Ensures full centering */
+    width: 100%; 
+    max-width: 1000px; 
+    margin-top: 90px;
     padding: 40px 20px;
 }
 
 .cs2-section {
     display: flex;
-    flex-direction: column; /* Default stack */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: 20px;
-    width: 100%; /* Allows full content width */
-    justify-content: center; /* Centers elements inside */
+    width: 100%; 
+    justify-content: center; 
 }
 
 
 .cs2-text {
-    width: 100%; /* Prevents shrinkage */
+    width: 100%;
     max-width: 600px;
     text-align: center;
     font-size: clamp(14px, 2vw, 18px);
     line-height: clamp(1.4, 2vw, 2);
-    margin: 0 auto; /* Centers the text block */
+    margin: 0 auto; 
+    background-color: #EBE9E1; 
+    border-radius: 10px; 
+    padding: 20px;
 }
 
 
@@ -844,9 +901,9 @@ main {
 
 .cs2-image {
     display: flex;
-    justify-content: center; /* Centers images */
+    justify-content: center; 
     align-items: center;
-    width: 100%; /* Prevents content shifting */
+    width: 100%; 
     max-width: 800px;
     height: auto;
 }
@@ -957,29 +1014,32 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    width: 100%; /* Ensures it spans full width */
-    max-width: 1000px; /* Keeps it contained */
-    margin-top: 90px; /* Ensures full centering */
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 90px; 
     padding: 40px 20px;
 }
 
 .cs3-section {
     display: flex;
-    flex-direction: column; /* Default stack */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: 20px;
-    width: 100%; /* Allows full content width */
-    justify-content: center; /* Centers elements inside */
+    width: 100%; 
+    justify-content: center;
 }
 
 .cs3-text {
-    width: 100%; /* Prevents shrinkage */
+    width: 100%; 
     max-width: 600px;
     text-align: center;
     font-size: clamp(14px, 2vw, 18px);
     line-height: clamp(1.4, 2vw, 2);
-    margin: 0 auto; /* Centers the text block */
+    margin: 0 auto; 
+    background-color: #EBE9E1; 
+    border-radius: 10px; 
+    padding: 20px;
 }
 
 .cs3-text.full-width {
@@ -989,9 +1049,9 @@ main {
 
 .cs3-image {
     display: flex;
-    justify-content: center; /* Centers images */
+    justify-content: center;
     align-items: center;
-    width: 100%; /* Prevents content shifting */
+    width: 100%; 
     max-width: 800px;
     height: auto;
 }
@@ -1208,67 +1268,46 @@ main {
 /* ======================================================================= */
 
 @media (min-width: 320px) {
+    .resume {
+        background-color: #EBE9E1;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 700px;
+        margin: 130px auto 0 auto; /* Centering the resume */
+        margin-bottom: 90px;
+        text-align: center;
+    }
+    
+    .resume h2, .resume h3, .resume h4, .resume p, .resume ol, .resume ul, .resume li {
+        max-width: 500px;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto; /* Ensures centering */
+    }
 
     .resume h2 {
-        max-width: 450px;
-        margin: auto;
-        padding: 10px;
-        text-align: left;
         font-size: 35px;
         color: #E43D12;
     }
 
     .resume h3 {
-        max-width: 450px;
-        margin: auto;
-        padding: 10px;
-        text-align: left;
         font-size: 25px;
         color: #E43D12;
-    } 
+    }
 
     .resume h4 {
-        max-width: 450px;
-        margin: auto;
-        padding: 10px;
-        text-align: left;
         font-size: 20px;
         color: #E43D12;
     }
 
-    .resume p {
-        max-width: 500px;
-        margin: auto;
-        padding: 20px;
-        text-align: left;
-        font-size: 15px;
+    .resume .download-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
     }
     
-    .resume ol {
-        max-width: 400px;
-        margin: auto;
-        padding: 20px;
-        text-align: left;
-        font-size: 15px;
-    }
-
-    .resume ul {
-        max-width: 400px;
-        margin: auto;
-        padding: 20px;
-        text-align: left;
-        font-size: 15px;
-    }
-
-    .resume li {
-        max-width: 400px;
-        margin: auto;
-        padding: 10px;
-        line-height: 1.5;
-        text-align: left;
-        font-size: 15px;
-    }
-
     .resume .download-button {
         display: inline-block;
         background-color: #E43D12;
@@ -1279,20 +1318,12 @@ main {
         text-align: center;
         transition: background-color 0.3s ease;
     }
-
+    
     .resume .download-button:hover {
         background-color: #E43D12;
     }
-
-    .resume .download-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-    }
-  
 }
+
 
 
 /* ======================================================================= */
@@ -1300,17 +1331,32 @@ main {
 /* ======================================================================= */
 
 @media (min-width: 320px) {
-    .contact-info-page {
-        max-width: 500px;
-        margin: auto;
+    .contact-text {
+        background-color: #EBE9E1;
+        border-radius: 10px;
         padding: 20px;
+        width: 700px;
+        max-width: 90%; /* Ensures responsiveness on smaller screens */
+        text-align: center; /* Centers the text inside */
+        margin: 0 auto; /* Centers the box itself */
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        font-size: 18px;
+        justify-content: center;
     }
-    
+
+    .contact-info-page {
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto; /* Centers the section */
+        padding: 20px;
+        text-align: center;
+    }
+
     .contact-info a,
     .contact-info-page a {
-        color: #E43D12; 
+        color: #E43D12;
         font-weight: bold;
         text-decoration: underline;
     }
