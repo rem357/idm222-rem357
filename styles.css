@@ -520,7 +520,7 @@ nav {
     margin: auto;
     padding: clamp(10px, 3vw, 40px);
     font-size: clamp(14px, 2vw, 22px);
-    line-height: clamp(1.4, 2vw, 2);
+    line-height: 1.6;
     background-color: #EBE9E1; 
     border-radius: 10px; 
 
@@ -741,7 +741,7 @@ nav {
     max-width: 600px;
     text-align: center;
     font-size: clamp(14px, 2vw, 18px);
-    line-height: clamp(1.4, 2vw, 2);
+    line-height: 1.6;
     background-color: #EBE9E1; 
     border-radius: 10px; 
     padding: 20px;
@@ -807,7 +807,7 @@ nav {
         flex: 1;
         max-width: 50%;
         font-size: clamp(16px, 2.2vw, 22px);
-        line-height: clamp(1.4, 2vw, 2);
+        line-height: 1.6;
         text-align: center;
     }
 
@@ -886,7 +886,7 @@ nav {
     max-width: 600px;
     text-align: center;
     font-size: clamp(14px, 2vw, 18px);
-    line-height: clamp(1.4, 2vw, 2);
+    line-height: 1.6;
     margin: 0 auto; 
     background-color: #EBE9E1; 
     border-radius: 10px; 
@@ -958,7 +958,7 @@ nav {
         flex: 1;
         max-width: 50%;
         font-size: clamp(16px, 2.2vw, 22px);
-        line-height: clamp(1.4, 2vw, 2);
+        line-height: 1.6;
         text-align: center;
     }
 
@@ -1035,7 +1035,7 @@ nav {
     max-width: 600px;
     text-align: center;
     font-size: clamp(14px, 2vw, 18px);
-    line-height: clamp(1.4, 2vw, 2);
+    line-height: 1.6;
     margin: 0 auto; 
     background-color: #EBE9E1; 
     border-radius: 10px; 
@@ -1105,7 +1105,7 @@ nav {
         flex: 1;
         max-width: 50%;
         font-size: clamp(16px, 2.2vw, 22px);
-        line-height: clamp(1.4, 2vw, 2);
+        line-height: 1.6;
         text-align: center;
     }
 
